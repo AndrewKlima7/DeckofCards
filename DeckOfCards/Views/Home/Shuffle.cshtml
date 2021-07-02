@@ -1,0 +1,8 @@
+﻿@model Deck
+<h2>Deck id: @Model.deck_id has been shuffle</h2> 
+<h3>How many cards to Draw</h3>
+<form action="/Home/DrawCard" method="post">
+    <input type="number" name="amount" />
+    <input value="@Model.deck_id" type="hidden" name="id" />
+    <button type="Submit">Draw Card(s)</button>
+</form>
